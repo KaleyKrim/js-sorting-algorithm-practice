@@ -14,7 +14,7 @@
   function sortArray(left, right){
     debugger;
     var temp = [];
-    for (var i = 0; i < left.length; i++) {
+    for (var i = 0; i < left.length; i) {
       var savei = left[i];
       var tempValue = left.splice(i, 1);
       temp.push(tempValue);
@@ -29,12 +29,21 @@
         var result = [].concat.apply([], temp);
         temp = result;
         }
+        for (var j = 0; j < right.length; j++){
+          var savej = right[j];
+          tempValue = right.splice(j, 1);
+          if(savej > temp[0]){
+            temp.push(savej);
+              }else{
+                temp.unshift(savej);
+              }
+            }
       }
     return temp;
   }
 
 
-var array1 = [10, 3];
+var array1 = [3, 10];
 var array2 = [4, 5];
 
 console.log(sortArray(array1, array2));
