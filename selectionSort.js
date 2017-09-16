@@ -28,4 +28,4 @@ var selectionSort = function () {
 
 
 var array = [5, 9, 1, 10, 10, 4, 14, 7, 3, 4];
-console.log(selectionSort().sortArray(array));
+selectionSort().sortArray(array);
