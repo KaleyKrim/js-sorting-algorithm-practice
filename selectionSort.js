@@ -1,13 +1,10 @@
 var selectionSort = function () {
 
-debugger;
-
   function swapValue(arr, i, j){
     var savedValue = arr[i];
     arr[i] = arr[j];
     arr[j] = savedValue;
   }
-
 
   function sortArray (arr){
     for (var i = 0; i < arr.length; i++) {
@@ -23,7 +20,6 @@ debugger;
     }
     return arr;
   }
-
   return {
     swapValue : swapValue,
     sortArray : sortArray,
