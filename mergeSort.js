@@ -14,9 +14,9 @@ function mergeSort(arr){
   function sort(left, right){
     var sorted = [];
     while((left.length + right.length) > 0){
-      if(left[0] === undefined){
+      if(!left[0]){
         sorted.push(right.shift());
-      }else if(right[0] === undefined){
+      }else if(!right[0]){
         sorted.push(left.shift());
       }else if(left[0] < right[0]){
         sorted.push(left.shift());
