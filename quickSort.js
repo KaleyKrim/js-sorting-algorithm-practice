@@ -12,13 +12,13 @@ function quickSort(arr){
 
   let smaller = [];
   let larger = [];
-  let centerIndex = Math.round((arr.length - 1)/2);
   let pivot = [arr[0]];
 
   if (arr.length === 0){
     return arr;
   }
 
+  //we start at arr[1] because arr[0] is the pivot.
   for (let i = 1; i < arr.length; i++){
     if (arr[i] < pivot){
       smaller.push(arr[i]);
@@ -31,3 +31,5 @@ function quickSort(arr){
 };
 
 let array = [5, 9, 1, 10, 10, 4, 14, 7, 3, 4];
+
+console.log(quickSort(array));
